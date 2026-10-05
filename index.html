@@ -134,30 +134,8 @@
     <section class="sec" id="proyectos">
       <div class="wrap">
         <h2 class="reveal">Proyectos</h2>
-        <div class="grid grid--3" id="projects">
-
-          <!-- PROYECTO 1: EE.SS VIRGEN DE LAS NIEVES
-               Para añadir más proyectos, DUPLICA todo el bloque <article class="project"> ... </article>
-               y cambia imagen, nombre, descripción, tecnologías, categoría y enlaces. -->
-          <article class="project reveal">
-            <div class="project__img">
-              <!-- IMAGEN: guarda tu captura en assets/images/proyectos/ee-ss-virgen-de-las-nieves.jpg -->
-              <img src="assets/images/proyectos/ee-ss-virgen-de-las-nieves.jpg" alt="Captura del proyecto EE.SS Virgen de las Nieves" loading="lazy" width="640" height="400">
-            </div>
-            <div class="project__body">
-              <span class="tag">Categoría: por completar</span>
-              <h3>EE.SS Virgen de las Nieves</h3>
-              <p>Descripción del proyecto: por completar.</p>
-              <p class="stack">Tecnologías: por completar</p>
-              <div class="btns">
-                <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Ver proyecto</a>
-                <a class="btn btn--sm btn--ghost" href="#">Ver detalles</a>
-              </div>
-            </div>
-          </article>
-          <!-- FIN PROYECTO 1 -->
-
-        </div>
+        <!-- Las tarjetas se generan automáticamente desde js/projects.js -->
+        <div class="grid grid--3" id="projects"></div>
       </div>
     </section>
 
@@ -215,6 +193,20 @@
   </a>
   <button class="top" id="top" aria-label="Volver arriba">↑</button>
 
+  <!-- Vista previa de proyectos -->
+  <dialog id="pvModal" class="pv" aria-labelledby="pvTitle">
+    <div class="pv__head"><h3 id="pvTitle"></h3><button class="pv__x" id="pvClose" aria-label="Cerrar vista previa">×</button></div>
+    <div class="pv__frame" id="pvFrame"></div>
+    <div class="pv__info">
+      <span class="tag" id="pvCat"></span>
+      <p id="pvDesc"></p>
+      <p class="stack" id="pvStack"></p>
+      <a class="btn btn--sm" id="pvLink" target="_blank" rel="noopener">Abrir sitio</a>
+      <p class="pv__note">Si la vista previa no carga, ese sitio no permite mostrarse dentro de otra página. Ábrelo en una pestaña nueva.</p>
+    </div>
+  </dialog>
+
+  <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

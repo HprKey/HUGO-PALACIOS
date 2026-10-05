@@ -121,6 +121,22 @@ h3{font-size:1.2rem;margin-bottom:.5rem}
 .tag{align-self:flex-start;font-size:.75rem;color:var(--cyan);border:1px solid var(--line);border-radius:99px;padding:.15rem .7rem;margin-bottom:.8rem}
 .stack{margin-top:.4rem}
 
+.project--empty{padding:2rem;text-align:center;color:var(--muted);border-style:dashed}
+.project__ph{font:800 3rem var(--f-head);color:var(--line)}
+.project__img img{transition:transform .5s}.project:hover .project__img img{transform:scale(1.04)}
+
+/* Vista previa (modal) */
+.pv{margin:auto;width:min(960px,94vw);max-height:92vh;overflow:auto;padding:0;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:16px}
+.pv::backdrop{background:rgba(2,13,30,.82);backdrop-filter:blur(4px)}
+.pv__head{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.4rem;border-bottom:1px solid var(--line)}
+.pv__head h3{margin:0}
+.pv__x{background:none;border:0;color:var(--text);font-size:2rem;line-height:1;cursor:pointer;width:44px;height:44px}
+.pv__frame{height:min(56vh,520px);background:var(--bg)}
+.pv__frame iframe,.pv__frame img{width:100%;height:100%;border:0;object-fit:contain}
+.pv__info{padding:1.2rem 1.4rem 1.6rem;display:grid;gap:.6rem;justify-items:start}
+.pv__info p{color:var(--muted);font-size:.95rem}
+.pv__note{font-size:.8rem!important}
+
 /* ==============================
    FORMACIÓN
 ================================ */

@@ -33,13 +33,17 @@ Respeta mayúsculas y minúsculas: GitHub Pages distingue `Foto.JPG` de `foto.jp
 - Opción simple: abre `index.html` con doble clic.
 - Opción recomendada: en VS Code instala **Live Server** y pulsa "Go Live".
 
-## 4. Editar proyectos
+## 4. Agregar o editar proyectos
 
-En `index.html` busca `PROYECTO 1: EE.SS VIRGEN DE LAS NIEVES` y cambia imagen, categoría, descripción, tecnologías y enlaces de "Ver proyecto" y "Ver detalles".
+Todo se hace en `js/projects.js`. Copia el bloque de ejemplo, quita las `//` y completa nombre, categoría, descripción, tecnologías, imagen (opcional) y `url`.
 
-## 5. Añadir proyectos nuevos
+- Con `url`, el botón **Vista previa** muestra el sitio en vivo dentro de una ventana.
+- Algunos sitios bloquean ser mostrados dentro de otra página. Si pasa, la ventana tiene el botón para abrirlo en una pestaña nueva.
+- Si no hay proyectos, la web muestra "Próximamente".
 
-Copia el bloque completo desde `<article class="project reveal">` hasta `</article>`, pégalo debajo dentro de `<div id="projects">` y cambia sus datos. La cuadrícula se reorganiza sola.
+## 5. Capturas de proyectos
+
+Guarda las imágenes en `assets/images/proyectos/` y escribe su ruta en el campo `imagen`.
 
 ## 6. Otros ajustes
 

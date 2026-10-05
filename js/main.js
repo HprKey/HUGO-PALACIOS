@@ -107,3 +107,63 @@ $('#form').addEventListener('submit', e => {
   window.open(waLink(msg), '_blank', 'noopener');
   f.reset();
 });
+
+/* ==============================
+   PROYECTOS Y VISTA PREVIA
+   (los datos están en js/projects.js)
+================================ */
+const grid = $('#projects'), modal = $('#pvModal'), frame = $('#pvFrame');
+const mk = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; };
+
+function openPreview(p) {
+  $('#pvTitle').textContent = p.nombre;
+  $('#pvCat').textContent = p.categoria || 'Proyecto';
+  $('#pvDesc').textContent = p.descripcion || '';
+  $('#pvStack').textContent = p.tecnologias && p.tecnologias.length ? 'Tecnologías: ' + p.tecnologias.join(', ') : '';
+  const link = $('#pvLink'), note = $('.pv__note');
+  link.hidden = note.hidden = !p.url;
+  if (p.url) link.href = p.url;
+  frame.replaceChildren();
+  if (p.url) {
+    const f = mk('iframe');
+    f.src = p.url; f.title = 'Vista previa de ' + p.nombre; f.loading = 'lazy';
+    f.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups');
+    frame.appendChild(f);
+  } else if (p.imagen) {
+    const i = mk('img'); i.src = p.imagen; i.alt = 'Captura de ' + p.nombre; frame.appendChild(i);
+  }
+  modal.showModal();
+}
+function closePreview() { modal.close(); frame.replaceChildren(); }
+$('#pvClose').addEventListener('click', closePreview);
+modal.addEventListener('click', e => { if (e.target === modal) closePreview(); });
+modal.addEventListener('close', () => frame.replaceChildren());
+
+function renderProjects() {
+  grid.replaceChildren();
+  if (!PROJECTS.length) {
+    grid.appendChild(mk('article', 'project project--empty reveal in', 'Próximamente: aquí aparecerán mis nuevos proyectos.'));
+    return;
+  }
+  PROJECTS.forEach(p => {
+    const card = mk('article', 'project reveal in');
+    const imgBox = mk('div', 'project__img');
+    if (p.imagen) {
+      const i = mk('img'); i.src = p.imagen; i.alt = 'Captura del proyecto ' + p.nombre; i.loading = 'lazy'; i.width = 640; i.height = 400;
+      i.addEventListener('error', () => { i.remove(); imgBox.appendChild(mk('span', 'project__ph', p.nombre.charAt(0))); });
+      imgBox.appendChild(i);
+    } else imgBox.appendChild(mk('span', 'project__ph', p.nombre.charAt(0)));
+    const body = mk('div', 'project__body');
+    body.append(mk('span', 'tag', p.categoria || 'Proyecto'), mk('h3', '', p.nombre), mk('p', '', p.descripcion || ''));
+    if (p.tecnologias && p.tecnologias.length) body.appendChild(mk('p', 'stack', 'Tecnologías: ' + p.tecnologias.join(', ')));
+    const btns = mk('div', 'btns');
+    const prev = mk('button', 'btn btn--sm', 'Vista previa'); prev.type = 'button';
+    prev.addEventListener('click', () => openPreview(p));
+    btns.appendChild(prev);
+    if (p.url) { const a = mk('a', 'btn btn--sm btn--ghost', 'Ver proyecto'); a.href = p.url; a.target = '_blank'; a.rel = 'noopener'; btns.appendChild(a); }
+    body.appendChild(btns);
+    card.append(imgBox, body);
+    grid.appendChild(card);
+  });
+}
+renderProjects();
