@@ -1,0 +1,185 @@
+/* ==============================
+   VARIABLES (cambia colores aquí)
+================================ */
+:root{
+  --bg:#020d1e; --bg2:#06162c; --card:#0a1a33; --line:#13305a;
+  --blue:#0a7bff; --cyan:#0ad5ff; --text:#e8f0ff; --muted:#9db0cf;
+  --warm:#e9b27a; /* tono cálido muy sutil, tomado de la fotografía */
+  --f-head:'Sora',system-ui,sans-serif; --f-body:'DM Sans',system-ui,sans-serif;
+  --nav-h:68px;
+}
+
+/* ==============================
+   BASE
+================================ */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--nav-h)}
+body{background:var(--bg);color:var(--text);font:400 1.05rem/1.7 var(--f-body);overflow-x:hidden;
+  scrollbar-color:var(--blue) var(--bg)}
+::selection{background:var(--cyan);color:var(--bg)}
+::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:6px}
+img{max-width:100%;display:block}
+a{color:var(--cyan);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.skip{position:absolute;left:-999px}.skip:focus{left:10px;top:10px;z-index:99;background:var(--cyan);color:var(--bg);padding:8px 12px}
+h1,h2,h3{font-family:var(--f-head);line-height:1.15}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.6rem;letter-spacing:-.01em}
+h3{font-size:1.2rem;margin-bottom:.5rem}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+.narrow{width:min(760px,92%)}
+.narrow p{margin-bottom:1rem;color:var(--muted)}
+.sec{padding:clamp(4rem,9vw,7rem) 0}
+.sec:nth-of-type(even){background:linear-gradient(180deg,var(--bg),var(--bg2),var(--bg))}
+.slogan{font-family:var(--f-head);font-weight:700;color:var(--cyan);letter-spacing:.14em;font-size:.85rem}
+
+/* ==============================
+   NAVBAR
+================================ */
+.nav{position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+.nav.is-scrolled{background:rgba(5,11,24,.72);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:var(--line)}
+.nav__in{width:min(1120px,92%);height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between}
+.logo-crop{display:block;overflow:hidden;aspect-ratio:1030/180;height:34px}
+/* El logo original se recorta por CSS (sin modificar el archivo) para mostrar solo "HPR-KEY" */
+.logo-crop img{width:121.75%;max-width:none;height:auto;margin-left:-11.17%;margin-top:-49.5%;mix-blend-mode:lighten}
+.logo-crop--lg{height:44px}
+.nav__menu{display:flex;gap:1.8rem}
+.nav__menu a{color:var(--muted);font-size:.9rem;font-weight:500;position:relative;padding:.3rem 0;text-decoration:none}
+.nav__menu a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--cyan);transition:width .3s}
+.nav__menu a:hover,.nav__menu a.active{color:var(--text)}
+.nav__menu a:hover::after,.nav__menu a.active::after{width:100%}
+.nav__btn{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;flex-direction:column;justify-content:center;gap:5px;align-items:center}
+.nav__btn span{width:24px;height:2px;background:var(--text);transition:transform .3s,opacity .3s}
+.nav__btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav__btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav__btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ==============================
+   BOTONES
+================================ */
+.btn{display:inline-block;font:700 .85rem var(--f-head);letter-spacing:.06em;text-transform:uppercase;padding:.95rem 1.6rem;border-radius:10px;
+  border:1px solid var(--blue);background:transparent;color:var(--text);cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s;text-decoration:none!important}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px -8px var(--blue)}
+.btn--primary{background:linear-gradient(135deg,var(--blue),#1450c8);border-color:transparent}
+.btn--ghost{border-color:var(--line);color:var(--cyan)}
+.btn--ghost:hover{border-color:var(--cyan)}
+.btn--sm{padding:.65rem 1.1rem;font-size:.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;margin:1.6rem 0 1rem}
+
+/* ==============================
+   HERO
+================================ */
+.hero{min-height:100svh;display:flex;align-items:center;padding:calc(var(--nav-h) + 2rem) 0 3rem;
+  background:radial-gradient(60% 60% at 80% 40%,rgba(30,107,255,.22),transparent 70%),var(--bg)}
+.hero__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center}
+.hello{color:var(--muted);font-size:1.1rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5rem);font-weight:800;letter-spacing:-.03em;margin:.2rem 0 1rem}
+.lead{font-size:clamp(1.1rem,2vw,1.35rem);max-width:30ch;margin-bottom:1.2rem}
+.roles{font:500 1.1rem var(--f-head);color:var(--cyan);min-height:1.8em}
+.roles__pre{color:var(--muted)}
+.caret{display:inline-block;width:2px;height:1.1em;background:var(--cyan);margin-left:2px;vertical-align:-.15em;animation:blink 1s steps(2) infinite}
+.cv{font-size:.9rem;color:var(--muted);border-bottom:1px dashed var(--line)}
+.hero__visual{position:relative;display:grid;place-items:center;min-height:420px}
+.photo{position:relative;z-index:2;width:min(380px,80%);aspect-ratio:4/5;border-radius:24px 24px 120px 24px;overflow:hidden;
+  border:1px solid var(--line);background:var(--card);box-shadow:0 30px 80px -30px rgba(30,107,255,.6),0 0 0 8px rgba(53,208,255,.05)}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 60%,rgba(233,178,122,.12))}
+.ring{position:absolute;border-radius:50%;border:1px solid var(--line)}
+.ring--1{width:min(460px,95%);aspect-ratio:1;border-color:rgba(53,208,255,.3);border-style:dashed}
+.ring--2{width:min(540px,110%);aspect-ratio:1;opacity:.5}
+.chip{position:absolute;z-index:3;font:.78rem 'Courier New',monospace;background:rgba(13,26,51,.85);border:1px solid var(--line);color:var(--cyan);padding:.4rem .7rem;border-radius:8px;backdrop-filter:blur(6px)}
+.chip--a{top:12%;left:-2%}.chip--b{bottom:10%;right:-2%}
+
+/* ==============================
+   SERVICIOS / TARJETAS
+================================ */
+.grid{display:grid;gap:1.4rem}
+.grid--4{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.grid--3{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.card,.project{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover,.project:hover{transform:translateY(-6px);border-color:var(--cyan);box-shadow:0 20px 40px -24px var(--blue)}
+.card p{color:var(--muted);font-size:.95rem;margin-bottom:1.3rem;flex:1}
+.ico{width:48px;height:48px;display:grid;place-items:center;border-radius:12px;background:rgba(30,107,255,.15);color:var(--cyan);font:700 1rem var(--f-head);margin-bottom:1rem}
+
+/* ==============================
+   HERRAMIENTAS
+================================ */
+.tools{list-style:none;display:flex;flex-wrap:wrap;gap:1rem}
+.tools li{display:flex;align-items:center;gap:.8rem;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:.9rem 1.3rem;font-weight:500;transition:border-color .3s,transform .3s}
+.tools li:hover{border-color:var(--cyan);transform:translateY(-3px)}
+.tools b{color:var(--cyan);font-family:var(--f-head)}
+
+/* ==============================
+   PROYECTOS
+================================ */
+.project{padding:0;overflow:hidden}
+.project__img{aspect-ratio:16/10;background:linear-gradient(135deg,var(--bg2),var(--card));display:grid;place-items:center}
+.project__img img{width:100%;height:100%;object-fit:cover}
+.project__body{padding:1.4rem;display:flex;flex-direction:column;flex:1}
+.project__body p{color:var(--muted);font-size:.95rem}
+.tag{align-self:flex-start;font-size:.75rem;color:var(--cyan);border:1px solid var(--line);border-radius:99px;padding:.15rem .7rem;margin-bottom:.8rem}
+.stack{margin-top:.4rem}
+
+/* ==============================
+   FORMACIÓN
+================================ */
+.timeline{list-style:none;border-left:2px solid var(--line);padding-left:1.8rem}
+.timeline li{position:relative;margin-bottom:2rem}
+.timeline li::before{content:"";position:absolute;left:calc(-1.8rem - 7px);top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 4px rgba(53,208,255,.15)}
+.timeline p{color:var(--muted);margin:0}
+
+/* ==============================
+   CONTACTO
+================================ */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start}
+.contact>div p{color:var(--muted);margin-bottom:1rem}
+.data{line-height:2}
+form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:1.6rem;display:grid;gap:1rem}
+label{display:grid;gap:.35rem;font-size:.9rem;color:var(--muted)}
+input,textarea{font:inherit;color:var(--text);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.8rem 1rem;transition:border-color .2s}
+input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(53,208,255,.15)}
+.err{color:#ff8a8a;font-size:.9rem;min-height:1.2em}
+
+/* ==============================
+   FOOTER, WHATSAPP Y VOLVER ARRIBA
+================================ */
+.foot{border-top:1px solid var(--line);padding:2.5rem 0;text-align:center;color:var(--muted);font-size:.9rem}
+.foot__in{display:grid;gap:.7rem;justify-items:center}
+
+.wa{position:fixed;right:20px;bottom:20px;z-index:40;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#1fae5b;color:#fff;box-shadow:0 8px 24px -8px rgba(0,0,0,.6);transition:transform .25s}
+.wa:hover{transform:scale(1.08)}
+.top{position:fixed;right:24px;bottom:86px;z-index:40;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--cyan);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.top.show{opacity:1;pointer-events:auto}
+
+/* ==============================
+   ANIMACIONES
+================================ */
+@keyframes blink{50%{opacity:0}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+.hero__text,.hero__visual{animation:fade 1s both}.hero__visual{animation-delay:.2s}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}}
+
+/* ==============================
+   RESPONSIVE
+================================ */
+@media (max-width:860px){
+  .nav__btn{display:flex}
+  .nav__menu{position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:0;background:rgba(5,11,24,.97);border-bottom:1px solid var(--line);padding:.5rem 4%;transform:translateY(-120%);transition:transform .35s;visibility:hidden}
+  .nav__menu.open{transform:none;visibility:visible}
+  .nav__menu a{padding:1rem 0;border-bottom:1px solid var(--line)}
+  .hero{min-height:auto}
+  .hero__grid{grid-template-columns:1fr;text-align:center}
+  .lead{margin-inline:auto}.btns{justify-content:center}
+  .hero__visual{order:-1;min-height:360px}
+  .contact{grid-template-columns:1fr}
+  .chip--a{left:2%}.chip--b{right:2%}
+}
+@media (max-width:480px){.btn{width:100%;text-align:center}.btn--sm{width:auto}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}

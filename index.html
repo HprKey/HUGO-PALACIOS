@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hugo Palacios | Desarrollo Web &amp; Marketing Digital</title>
+  <meta name="description" content="Portafolio de Hugo Palacios, desarrollador web y especialista en marketing digital, Meta Ads y soluciones digitales.">
+  <meta name="theme-color" content="#020d1e">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Hugo Palacios | Desarrollo Web & Marketing Digital">
+  <meta property="og:description" content="Portafolio de Hugo Palacios, desarrollador web y especialista en marketing digital, Meta Ads y soluciones digitales.">
+  <meta property="og:image" content="assets/images/logo-hpr-key.png">
+
+  <!-- Favicon: coloca tu favicon en assets/icons/favicon.png -->
+  <link rel="icon" href="assets/icons/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#inicio">Saltar al contenido</a>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <div class="nav__in">
+      <a href="#inicio" class="nav__logo" aria-label="HPR-KEY, ir al inicio">
+        <span class="logo-crop"><img src="assets/images/logo-hpr-key.png" alt="Logo HPR-KEY" width="1254" height="1254"></span>
+      </a>
+      <button class="nav__btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+      <nav id="menu" class="nav__menu" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#formacion">Formación</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio">
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="hello">Hola, soy</p>
+          <h1>Hugo Palacios</h1>
+          <p class="lead">Diseño experiencias digitales que convierten ideas en resultados.</p>
+          <p class="roles" aria-live="polite"><span class="roles__pre">&lt;</span><span id="role">Desarrollador Web</span><span class="caret" aria-hidden="true"></span><span class="roles__pre">/&gt;</span></p>
+          <div class="btns">
+            <a class="btn btn--primary" href="#proyectos">Ver mis proyectos</a>
+            <a class="btn btn--ghost" data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="#contacto" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
+          </div>
+          <!-- CV: sube tu archivo a assets/cv/CV-Hugo-Palacios.pdf -->
+          <a class="cv" href="assets/cv/CV-Hugo-Palacios.pdf" download>Descargar CV</a>
+        </div>
+
+        <div class="hero__visual">
+          <div class="ring ring--1"></div><div class="ring ring--2"></div>
+          <div class="photo">
+            <img id="heroPhoto" src="assets/images/hugo-palacios.jpg" alt="Retrato de Hugo Palacios" width="480" height="600" fetchpriority="high">
+          </div>
+          <code class="chip chip--a">const meta = "avanzar";</code>
+          <code class="chip chip--b">&lt;web&gt; + ads + IA</code>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="sec" id="sobre-mi">
+      <div class="wrap narrow reveal">
+        <h2>Sobre mí</h2>
+        <!-- EDITA: tu texto personal -->
+        <p>Soy Hugo Palacios, desarrollador web orientado también al marketing digital. Me apasiona transformar ideas en soluciones digitales funcionales, modernas y visualmente atractivas.</p>
+        <p>Combino desarrollo web, marketing, Meta Ads e inteligencia artificial para ayudar a negocios y profesionales a fortalecer su presencia digital.</p>
+        <p>Mi objetivo no es solamente crear una página web, sino desarrollar experiencias digitales capaces de comunicar, conectar y generar oportunidades.</p>
+        <p class="slogan">DESARROLLA | APRENDE | AVANZA</p>
+      </div>
+    </section>
+
+    <!-- ===== SERVICIOS ===== -->
+    <section class="sec" id="servicios">
+      <div class="wrap">
+        <h2 class="reveal">Servicios</h2>
+        <div class="grid grid--4">
+          <!-- SERVICIO: para cambiar el mensaje edita data-service -->
+          <article class="card reveal">
+            <span class="ico" aria-hidden="true">&lt;/&gt;</span>
+            <h3>Diseño web</h3>
+            <p>Diseño de interfaces modernas, profesionales y adaptadas a la identidad de cada proyecto.</p>
+            <button class="btn btn--sm" data-service="Diseño Web">Solicitar información</button>
+          </article>
+          <article class="card reveal">
+            <span class="ico" aria-hidden="true">▢</span>
+            <h3>Sitios web</h3>
+            <p>Desarrollo de páginas web responsivas orientadas a negocios, profesionales y emprendimientos.</p>
+            <button class="btn btn--sm" data-service="Sitios Web">Solicitar información</button>
+          </article>
+          <article class="card reveal">
+            <span class="ico" aria-hidden="true">◐</span>
+            <h3>Portafolios web</h3>
+            <p>Creación de portafolios digitales personalizados para profesionales y marcas personales.</p>
+            <button class="btn btn--sm" data-service="Portafolios Web">Solicitar información</button>
+          </article>
+          <article class="card reveal">
+            <span class="ico" aria-hidden="true">◎</span>
+            <h3>Marketing con Meta Ads</h3>
+            <p>Creación y gestión estratégica de campañas publicitarias enfocadas en aumentar alcance, clientes potenciales y oportunidades de negocio.</p>
+            <button class="btn btn--sm" data-service="Marketing con Meta Ads">Solicitar información</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HABILIDADES / HERRAMIENTAS ===== -->
+    <section class="sec" id="herramientas">
+      <div class="wrap">
+        <h2 class="reveal">Herramientas</h2>
+        <ul class="tools reveal">
+          <li><b>&lt;/&gt;</b>HTML</li>
+          <li><b>{ }</b>CSS</li>
+          <li><b>Cv</b>Canva</li>
+          <li><b>∞</b>Meta Ads</li>
+          <li><b>AI</b>Inteligencia Artificial</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section class="sec" id="proyectos">
+      <div class="wrap">
+        <h2 class="reveal">Proyectos</h2>
+        <div class="grid grid--3" id="projects">
+
+          <!-- PROYECTO 1: EE.SS VIRGEN DE LAS NIEVES
+               Para añadir más proyectos, DUPLICA todo el bloque <article class="project"> ... </article>
+               y cambia imagen, nombre, descripción, tecnologías, categoría y enlaces. -->
+          <article class="project reveal">
+            <div class="project__img">
+              <!-- IMAGEN: guarda tu captura en assets/images/proyectos/ee-ss-virgen-de-las-nieves.jpg -->
+              <img src="assets/images/proyectos/ee-ss-virgen-de-las-nieves.jpg" alt="Captura del proyecto EE.SS Virgen de las Nieves" loading="lazy" width="640" height="400">
+            </div>
+            <div class="project__body">
+              <span class="tag">Categoría: por completar</span>
+              <h3>EE.SS Virgen de las Nieves</h3>
+              <p>Descripción del proyecto: por completar.</p>
+              <p class="stack">Tecnologías: por completar</p>
+              <div class="btns">
+                <a class="btn btn--sm" href="#" target="_blank" rel="noopener">Ver proyecto</a>
+                <a class="btn btn--sm btn--ghost" href="#">Ver detalles</a>
+              </div>
+            </div>
+          </article>
+          <!-- FIN PROYECTO 1 -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FORMACIÓN ===== -->
+    <section class="sec" id="formacion">
+      <div class="wrap narrow">
+        <h2 class="reveal">Formación</h2>
+        <ol class="timeline">
+          <li class="reveal">
+            <h3>IESTP Misioneros Monfortianos</h3>
+            <p>Desarrollo de Sistemas de Información</p>
+          </li>
+          <li class="reveal">
+            <h3>American English Campus Virtual</h3>
+            <p>Inglés · Nivel A2</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="sec" id="contacto">
+      <div class="wrap contact reveal">
+        <div>
+          <h2>¿Tienes un proyecto en mente?</h2>
+          <p>Hablemos sobre tu idea y veamos cómo podemos convertirla en una experiencia digital.</p>
+          <p class="data">WhatsApp: <a href="https://wa.me/51952544545" target="_blank" rel="noopener">+51 952 544 545</a><br>
+          Correo: <a href="mailto:hugopalaciosriera@gmail.com">hugopalaciosriera@gmail.com</a></p>
+          <a class="btn btn--primary" data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="#contacto" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        </div>
+        <form id="form" novalidate>
+          <label>Nombre<input name="nombre" type="text" autocomplete="name" required></label>
+          <label>Correo<input name="correo" type="email" autocomplete="email" required></label>
+          <label>Mensaje<textarea name="mensaje" rows="4" required></textarea></label>
+          <p class="err" id="formErr" role="alert"></p>
+          <button class="btn btn--primary" type="submit">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="foot">
+    <div class="wrap foot__in">
+      <span class="logo-crop logo-crop--lg"><img src="assets/images/logo-hpr-key.png" alt="Logo HPR-KEY" width="1254" height="1254" loading="lazy"></span>
+      <p>© 2026 Hugo Palacios — Desarrollo Web &amp; Marketing Digital</p>
+      <p class="slogan">DESARROLLA | APRENDE | AVANZA</p>
+      <p><a data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="https://wa.me/51952544545" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:hugopalaciosriera@gmail.com">Correo</a></p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante y volver arriba -->
+  <a class="wa" data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="https://wa.me/51952544545" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Zm5.2 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.500-3.900-4.700-4.100-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 1.900c.1.200.1.400 0 .6l-.4.600c-.2.200-.3.400-.1.700.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l.9-1c.2-.3.400-.2.700-.1l1.800.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400Z"/></svg>
+  </a>
+  <button class="top" id="top" aria-label="Volver arriba">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
