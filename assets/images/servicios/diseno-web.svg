@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#061a3a"/><stop offset="1" stop-color="#0b3a8f"/></linearGradient></defs><rect width="800" height="500" fill="url(#g)"/>
+<rect x="70" y="60" width="420" height="380" rx="16" fill="#fff" fill-opacity=".08" stroke="#22d3ee" stroke-opacity=".6" stroke-dasharray="10 8" stroke-width="3"/>
+<rect x="100" y="90" width="360" height="40" rx="8" fill="#1e6bff"/><rect x="100" y="150" width="360" height="140" rx="10" fill="#fff" fill-opacity=".12"/>
+<path d="M100 150L460 290M460 150L100 290" stroke="#22d3ee" stroke-opacity=".5" stroke-width="2"/>
+<rect x="100" y="315" width="240" height="14" rx="7" fill="#fff" fill-opacity=".7"/><rect x="100" y="345" width="320" height="10" rx="5" fill="#fff" fill-opacity=".35"/><rect x="100" y="368" width="280" height="10" rx="5" fill="#fff" fill-opacity=".35"/>
+<rect x="100" y="395" width="110" height="30" rx="15" fill="#22d3ee"/>
+<g><circle cx="590" cy="120" r="34" fill="#1e6bff"/><circle cx="670" cy="120" r="34" fill="#22d3ee"/><circle cx="630" cy="190" r="34" fill="#fff"/><circle cx="710" cy="190" r="34" fill="#7aa8ff"/></g>
+<text x="560" y="320" fill="#fff" font-family="Arial,sans-serif" font-weight="700" font-size="96">Aa</text>
+<text x="565" y="355" fill="#22d3ee" font-family="Arial,sans-serif" font-size="22">Tipografía</text>
+<path d="M600 390l0 70 20-18 14 32 14-7-14-31 26-2z" fill="#fff" stroke="#061a3a" stroke-width="3" stroke-linejoin="round" transform="translate(0 -20)"/></svg>

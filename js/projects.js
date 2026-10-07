@@ -10,6 +10,7 @@ const PROJECTS = [
     categoria: "Plantilla · Restaurante",
     descripcion: "Plantilla para restaurantes con carta, horario y botón de reservas.",
     tecnologias: ["HTML", "CSS"],
+    imagen: "assets/images/proyectos/restaurante.jpg",
     url: "plantillas/restaurante.html"
   },
   {
@@ -17,6 +18,7 @@ const PROJECTS = [
     categoria: "Plantilla · Barbería",
     descripcion: "Plantilla para barberías con servicios, precios y reserva de turnos.",
     tecnologias: ["HTML", "CSS"],
+    imagen: "assets/images/proyectos/barberia.jpg",
     url: "plantillas/barberia.html"
   },
   {
@@ -24,6 +26,7 @@ const PROJECTS = [
     categoria: "Plantilla · Odontología",
     descripcion: "Plantilla para consultorios dentales con tratamientos, horario y citas.",
     tecnologias: ["HTML", "CSS"],
+    imagen: "assets/images/proyectos/odontologia.jpg",
     url: "plantillas/odontologia.html"
   },
   {
@@ -31,6 +34,7 @@ const PROJECTS = [
     categoria: "Plantilla · Portafolio virtual",
     descripcion: "Muestra de portafolio personal editable para diseñadores y profesionales.",
     tecnologias: ["HTML", "CSS"],
+    imagen: "assets/images/proyectos/portafolio.jpg",
     url: "plantillas/portafolio.html"
   }
 ];

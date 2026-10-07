@@ -23,3 +23,22 @@ section{padding:clamp(2.5rem,6vw,4.5rem) 0}
 footer{border-top:1px solid var(--ln);padding:1.6rem 0;font-size:.9rem;opacity:.8}
 footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
 @media(max-width:720px){.hero .w,.info .w{grid-template-columns:1fr}.art{aspect-ratio:16/9;order:-1;font-size:4rem}}
+img.art{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.facts{display:flex;gap:1.6rem;flex-wrap:wrap;margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--ln)}
+.facts b{display:block;font:700 1.5rem var(--fh);color:var(--ac)}.facts span{font-size:.85rem;opacity:.8}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.two p{opacity:.85;margin-bottom:1rem}
+ul.ck{list-style:none}ul.ck li{padding:.7rem 0 .7rem 1.8rem;border-bottom:1px solid var(--ln);position:relative}
+ul.ck li::before{content:"✓";position:absolute;left:0;color:var(--ac);font-weight:700}
+ol.st{list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.2rem}
+ol.st li{counter-increment:s;padding-top:1rem;border-top:3px solid var(--ac)}
+ol.st li::before{content:counter(s);font:700 1.6rem var(--fh);color:var(--ac)}
+ol.st p{opacity:.8;font-size:.95rem}
+blockquote{font-size:1rem}blockquote footer{border:0;padding:.8rem 0 0;font-weight:700;opacity:1;font-size:.9rem}
+details{border-bottom:1px solid var(--ln);padding:1rem 0}summary{cursor:pointer;font-weight:700}
+details p{margin-top:.6rem;opacity:.85}
+form{display:grid;gap:.8rem}input,textarea{font:inherit;padding:.75rem;border-radius:var(--r);border:1px solid var(--ln);background:var(--bg);color:var(--ink)}
+button.btn{border:0;cursor:pointer;font:inherit;font-weight:700}
+footer .w{align-items:flex-start}.fc{display:flex;gap:3rem;flex-wrap:wrap}.fc p{margin:0}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+@media(max-width:720px){.two{grid-template-columns:1fr}img.art{aspect-ratio:16/9}}
