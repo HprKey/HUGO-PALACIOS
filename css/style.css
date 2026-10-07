@@ -204,3 +204,12 @@ input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 
 .svc__img{margin:-1.6rem -1.6rem 1.2rem;aspect-ratio:16/10;overflow:hidden;border-radius:16px 16px 0 0;background:var(--bg2)}
 .svc__img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
 .card:hover .svc__img img{transform:scale(1.05)}
+
+/* Transición entre las dos fotos de la portada */
+.photo img{position:absolute;inset:0;animation:fotoA 10s ease-in-out infinite}
+.photo .photo__alt{object-position:50% 30%;opacity:0;animation:fotoB 10s ease-in-out infinite}
+@keyframes fotoA{0%,38%{opacity:1;transform:scale(1)}50%,88%{opacity:0;transform:scale(1.06)}100%{opacity:1;transform:scale(1)}}
+@keyframes fotoB{0%,38%{opacity:0;transform:scale(1.06)}50%,88%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.06)}}
+@keyframes fotoAf{0%,38%{opacity:1}50%,88%{opacity:0}100%{opacity:1}}
+@keyframes fotoBf{0%,38%{opacity:0}50%,88%{opacity:1}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.photo img{animation:fotoAf 10s ease-in-out infinite!important}.photo .photo__alt{animation:fotoBf 10s ease-in-out infinite!important}}
