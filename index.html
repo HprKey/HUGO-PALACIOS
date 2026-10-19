@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hugo Palacios | Desarrollo Web &amp; Marketing Digital</title>
-  <meta name="description" content="Portafolio de Hugo Palacios, desarrollador web y especialista en marketing digital, Meta Ads y soluciones digitales.">
+  <title>HPR Digital | Desarrollo Web y Academia</title>
+  <meta name="description" content="HPR Digital: desarrollo de páginas web, portafolio y recursos educativos prácticos en Perú.">
   <meta name="theme-color" content="#020d1e">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hugo Palacios | Desarrollo Web & Marketing Digital">
-  <meta property="og:description" content="Portafolio de Hugo Palacios, desarrollador web y especialista en marketing digital, Meta Ads y soluciones digitales.">
+  <meta property="og:description" content="HPR Digital: desarrollo de páginas web, portafolio y recursos educativos prácticos en Perú.">
   <meta property="og:image" content="assets/images/logo-hpr-key.png">
 
   <!-- Favicon: coloca tu favicon en assets/icons/favicon.png -->
@@ -36,6 +36,9 @@
         <a href="#sobre-mi">Sobre mí</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
+        <a href="#planes">Planes web</a>
+        <a href="#academia">Academia</a>
+        <a href="#carrito">Carrito <span id="cartCount" aria-live="polite">0</span></a>
         <a href="#formacion">Formación</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -49,10 +52,11 @@
         <div class="hero__text">
           <p class="hello">Hola, soy</p>
           <h1>Hugo Palacios</h1>
-          <p class="lead">Diseño experiencias digitales que convierten ideas en resultados.</p>
+          <p class="lead">Creo páginas web profesionales y recursos educativos para ayudarte a crecer en el mundo digital.</p>
           <p class="roles" aria-live="polite"><span class="roles__pre">&lt;</span><span id="role">Desarrollador Web</span><span class="caret" aria-hidden="true"></span><span class="roles__pre">/&gt;</span></p>
           <div class="btns">
-            <a class="btn btn--primary" href="#proyectos">Ver mis proyectos</a>
+            <a class="btn btn--primary" href="#planes">Contratar una web</a>
+            <a class="btn btn--ghost" href="#academia">Explorar academia</a>
             <a class="btn btn--ghost" data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="#contacto" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
           </div>
           <!-- CV: sube tu archivo a assets/cv/CV-Hugo-Palacios.pdf -->
@@ -140,6 +144,47 @@
       </div>
     </section>
 
+
+    <!-- PLANES COMERCIALES -->
+    <section class="sec hp-section" id="planes">
+      <div class="wrap">
+        <p class="hp-eyebrow">SOLUCIONES PARA NEGOCIOS</p>
+        <h2>Planes de desarrollo web</h2>
+        <p class="hp-intro">Precios de lanzamiento referenciales. Cada proyecto se cotiza según sus necesidades; dominio y hosting de pago no están incluidos.</p>
+        <div class="hp-grid" id="hpPlans"></div>
+        <p class="hp-note">Condiciones: 50% de adelanto, hasta dos rondas de correcciones y alcance definido antes de iniciar.</p>
+      </div>
+    </section>
+    <!-- ACADEMIA DIGITAL -->
+    <section class="sec hp-section hp-section--dark" id="academia">
+      <div class="wrap">
+        <p class="hp-eyebrow">HPR DIGITAL ACADEMY</p>
+        <h2>Aprende habilidades digitales</h2>
+        <p class="hp-intro">Guías, plantillas y cursos prácticos. Ya puedes solicitar nuestra guía Inteligencia Artificial desde Cero. Los demás materiales se muestran como próximos lanzamientos.</p>
+        <div class="hp-controls">
+          <label class="hp-search-label" for="productSearch">Buscar recursos <input id="productSearch" type="search" placeholder="Buscar por nombre o tema..."></label>
+          <label class="hp-search-label" for="productCategory">Categoría <select id="productCategory"><option value="todos">Todas</option><option value="IA">Inteligencia artificial</option><option value="Excel">Excel</option><option value="Diseño">Diseño</option><option value="Web">Desarrollo web</option></select></label>
+        </div>
+        <div class="hp-grid" id="hpProducts"></div>
+      </div>
+    </section>
+    <!-- CARRITO -->
+    <section class="sec hp-section" id="carrito">
+      <div class="wrap">
+        <p class="hp-eyebrow">PEDIDOS DIGITALES</p><h2>Tu carrito</h2>
+        <p class="hp-intro">Los pedidos se coordinan por WhatsApp. No se cobran ni se entregan archivos automáticamente.</p>
+        <div class="hp-cart-layout">
+          <div id="hpCartItems" aria-live="polite"></div>
+          <div class="hp-checkout">
+            <h3>Resumen</h3><p id="hpCartTotal">Total: S/ 0</p>
+            <label for="hpBuyer">Tu nombre</label><input id="hpBuyer" type="text" maxlength="100" autocomplete="name" placeholder="Nombre y apellido">
+            <button id="hpCheckout" class="btn btn--primary" type="button">Preparar pedido por WhatsApp</button>
+            <p id="hpCartStatus" role="status" class="hp-note"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== FORMACIÓN ===== -->
     <section class="sec" id="formacion">
       <div class="wrap narrow">
@@ -209,5 +254,6 @@
 
   <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/store.js"></script>
 </body>
 </html>
