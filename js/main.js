@@ -62,7 +62,20 @@ links.forEach(l => { const s = $(l.getAttribute('href')); if (s) sectionObserver
 const revealObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } });
 }, { threshold: 0.12 });
-$$('.reveal').forEach(el => revealObserver.observe(el));
+$('.reveal').forEach(el => revealObserver.observe(el));
+// Animación escalonada para tarjetas y secciones dinámicas, sin bloquear contenido.
+function hprObserveCards(root = document) {
+  if (reduceMotion) return;
+  const cards = root.querySelectorAll('.hp-card:not([data-hpr-motion]), .project:not([data-hpr-motion])');
+  cards.forEach((card, index) => {
+    card.dataset.hprMotion = '1';
+    card.classList.add('reveal');
+    card.style.setProperty('--reveal-delay', (index % 3) * 95 + 'ms');
+    revealObserver.observe(card);
+  });
+}
+window.hprObserveCards = hprObserveCards;
+
 
 /* ==============================
    HERO: TEXTO ANIMADO (TYPING)
@@ -146,7 +159,7 @@ function renderProjects() {
     return;
   }
   PROJECTS.forEach(p => {
-    const card = mk('article', 'project reveal in');
+    const card = mk('article', 'project');
     const imgBox = mk('div', 'project__img');
     if (p.imagen) {
       const i = mk('img'); i.src = p.imagen; i.alt = 'Captura del proyecto ' + p.nombre; i.loading = 'lazy'; i.width = 640; i.height = 400;
@@ -167,3 +180,4 @@ function renderProjects() {
   });
 }
 renderProjects();
+hprObserveCards(grid);
