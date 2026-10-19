@@ -3,9 +3,9 @@
   'use strict';
   const whatsapp = '51952544545'; // Verificar antes de publicar
   const plans = [
-    {title:'Página web básica',price:299,desc:'Una página responsiva con servicios, galería, SEO básico y WhatsApp.',time:'3–5 días hábiles',features:['Diseño adaptable','Hasta 2 revisiones','Contacto directo']},
-    {title:'Web empresarial',price:599,desc:'Hasta cuatro páginas o secciones, formulario de contacto y SEO básico.',time:'5–10 días hábiles',features:['Diseño personalizado','Hasta 2 revisiones','Formulario de contacto']},
-    {title:'Catálogo digital',price:399,desc:'Hasta 20 productos, categorías y consultas por WhatsApp, sin pagos en línea.',time:'4–7 días hábiles',features:['Catálogo responsivo','Hasta 20 productos','Pedidos por WhatsApp']}
+    {title:'Página web básica',desc:'Una página responsiva con servicios, galería, SEO básico y WhatsApp.',time:'3–5 días hábiles',features:['Diseño adaptable','Hasta 2 revisiones','Contacto directo']},
+    {title:'Web empresarial',desc:'Hasta cuatro páginas o secciones, formulario de contacto y SEO básico.',time:'5–10 días hábiles',features:['Diseño personalizado','Hasta 2 revisiones','Formulario de contacto']},
+    {title:'Catálogo digital',desc:'Hasta 20 productos, categorías y consultas por WhatsApp, sin pagos en línea.',time:'4–7 días hábiles',features:['Catálogo responsivo','Hasta 20 productos','Pedidos por WhatsApp']}
   ];
   // Cambiar available a true ÚNICAMENTE cuando el producto real esté listo para entregar.
   const products = [
