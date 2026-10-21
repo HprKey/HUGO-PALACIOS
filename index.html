@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HPR-KEY | Desarrollo Web y Academia</title>
-  <meta name="description" content="HPR-KEY: desarrollo de páginas web, portafolio y recursos educativos prácticos en Perú.">
+  <title>HPR-KEY | Experiencias Digitales</title>
+  <meta name="description" content="HPR-KEY: diseño web inmersivo, proyectos digitales y experiencias interactivas.">
   <meta name="theme-color" content="#020d1e">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Hugo Palacios | Desarrollo Web & Marketing Digital">
-  <meta property="og:description" content="HPR-KEY: desarrollo de páginas web, portafolio y recursos educativos prácticos en Perú.">
+  <meta property="og:description" content="HPR-KEY: diseño web inmersivo, proyectos digitales y experiencias interactivas.">
   <meta property="og:image" content="assets/images/logo-hpr-key.png">
 
   <!-- Favicon: coloca tu favicon en assets/icons/favicon.png -->
@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20261019-3">
+  <link rel="stylesheet" href="css/style.css?v=immersive-20261021">
 </head>
 <body>
   <a class="skip" href="#inicio">Saltar al contenido</a>
@@ -37,33 +37,31 @@
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#planes">Planes web</a>
-        <a href="#academia">Academia</a>
-        <a href="#carrito">Carrito <span id="cartCount" aria-live="polite">0</span></a>
         <a href="#formacion">Formación</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <div class="scroll-progress" aria-hidden="true"></div><main>
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
       <div class="wrap hero__grid">
         <div class="hero__text">
-          <p class="hello">Hola, soy</p>
-          <h1>Hugo Palacios</h1>
-          <p class="lead">Creo páginas web profesionales y recursos educativos para ayudarte a crecer en el mundo digital.</p>
+          <p class="hello">HPR-KEY / ESTUDIO DIGITAL INDEPENDIENTE</p>
+          <h1>Diseño digital <em>sin límites.</em></h1><p class="hero__by">Por Hugo Palacios · Desarrollo web creativo</p>
+          <p class="lead">Diseño experiencias web inmersivas que convierten ideas en marcas digitales memorables.</p>
           <p class="roles" aria-live="polite"><span class="roles__pre">&lt;</span><span id="role">Desarrollador Web</span><span class="caret" aria-hidden="true"></span><span class="roles__pre">/&gt;</span></p>
           <div class="btns">
-            <a class="btn btn--primary" href="#planes">Contratar una web</a>
-            <a class="btn btn--ghost" href="#academia">Explorar academia</a>
+            <a class="btn btn--primary" href="#proyectos">Explorar proyectos ↗</a>
+            <a class="btn btn--ghost" href="#servicios">Descubrir servicios</a>
             <a class="btn btn--ghost" data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="#contacto" target="_blank" rel="noopener">Hablemos por WhatsApp</a>
           </div>
           <!-- CV: sube tu archivo a assets/cv/CV-Hugo-Palacios.pdf -->
           <a class="cv" href="assets/cv/CV-Hugo-Palacios.pdf" download>Descargar CV</a>
         </div>
 
-        <div class="hero__visual">
+        <div class="hero__visual"><div class="immersive-scene" aria-hidden="true"><div class="orb orb--outer"></div><div class="orb orb--ring"></div><div class="orb orb--core"></div><span class="orb__label">HPR / 001 — DIGITAL UNIVERSE</span></div>
           <div class="ring ring--1"></div><div class="ring ring--2"></div>
           <div class="photo">
             <img id="heroPhoto" src="assets/images/hugo-palacios.jpg" alt="Retrato de Hugo Palacios" width="480" height="600" fetchpriority="high">
@@ -83,14 +81,14 @@
         <p>Soy Hugo Palacios, desarrollador web orientado también al marketing digital. Me apasiona transformar ideas en soluciones digitales funcionales, modernas y visualmente atractivas.</p>
         <p>Combino desarrollo web, marketing, Meta Ads e inteligencia artificial para ayudar a negocios y profesionales a fortalecer su presencia digital.</p>
         <p>Mi objetivo no es solamente crear una página web, sino desarrollar experiencias digitales capaces de comunicar, conectar y generar oportunidades.</p>
-        <p class="slogan">DESARROLLA | APRENDE | AVANZA</p>
+        <p class="slogan">IMAGINA | DISEÑA | IMPACTA</p>
       </div>
     </section>
 
     <!-- ===== SERVICIOS ===== -->
     <section class="sec" id="servicios">
       <div class="wrap">
-        <h2 class="reveal">Servicios</h2>
+        <p class="section-kicker reveal">QUÉ PODEMOS CREAR</p><h2 class="reveal">Experiencias <em>con propósito.</em></h2>
         <div class="grid grid--4">
           <!-- SERVICIO: para cambiar el mensaje edita data-service -->
           <article class="card reveal">
@@ -138,7 +136,7 @@
     <!-- ===== PROYECTOS ===== -->
     <section class="sec" id="proyectos">
       <div class="wrap">
-        <h2 class="reveal">Proyectos</h2>
+        <p class="section-kicker reveal">TRABAJOS SELECCIONADOS</p><h2 class="reveal">Proyectos que <em>hablan por sí solos.</em></h2>
         <!-- Las tarjetas se generan automáticamente desde js/projects.js -->
         <div class="grid grid--3" id="projects"></div>
       </div>
@@ -149,42 +147,12 @@
     <section class="sec hp-section" id="planes">
       <div class="wrap">
         <p class="hp-eyebrow">SOLUCIONES PARA NEGOCIOS</p>
-        <h2>Planes de desarrollo web</h2>
+        <h2>Tu próxima web <em>comienza aquí.</em></h2>
         <p class="hp-intro">Conoce nuestros servicios y solicita una cotización personalizada por WhatsApp. Dominio y hosting de pago se cotizan por separado.</p>
         <div class="hp-grid" id="hpPlans"></div>
         <p class="hp-note">Condiciones: 50% de adelanto, hasta dos rondas de correcciones y alcance definido antes de iniciar.</p>
       </div>
     </section>
-    <!-- ACADEMIA DIGITAL -->
-    <section class="sec hp-section hp-section--dark" id="academia">
-      <div class="wrap">
-        <p class="hp-eyebrow">HPR-KEY DIGITAL ACADEMY</p>
-        <h2>Aprende habilidades digitales</h2>
-        <p class="hp-intro">Guías, plantillas y cursos prácticos. Ya puedes solicitar nuestra guía Inteligencia Artificial desde Cero. Los demás materiales se muestran como próximos lanzamientos.</p>
-        <div class="hp-controls">
-          <label class="hp-search-label" for="productSearch">Buscar recursos <input id="productSearch" type="search" placeholder="Buscar por nombre o tema..."></label>
-          <label class="hp-search-label" for="productCategory">Categoría <select id="productCategory"><option value="todos">Todas</option><option value="IA">Inteligencia artificial</option><option value="Excel">Excel</option><option value="Diseño">Diseño</option><option value="Web">Desarrollo web</option></select></label>
-        </div>
-        <div class="hp-grid" id="hpProducts"></div>
-      </div>
-    </section>
-    <!-- CARRITO -->
-    <section class="sec hp-section" id="carrito">
-      <div class="wrap">
-        <p class="hp-eyebrow">PEDIDOS DIGITALES</p><h2>Tu carrito</h2>
-        <p class="hp-intro">Los pedidos se coordinan por WhatsApp. No se cobran ni se entregan archivos automáticamente.</p>
-        <div class="hp-cart-layout">
-          <div id="hpCartItems" aria-live="polite"></div>
-          <div class="hp-checkout">
-            <h3>Resumen</h3><p id="hpCartTotal">Total: S/ 0</p>
-            <label for="hpBuyer">Tu nombre</label><input id="hpBuyer" type="text" maxlength="100" autocomplete="name" placeholder="Nombre y apellido">
-            <button id="hpCheckout" class="btn btn--primary" type="button">Preparar pedido por WhatsApp</button>
-            <p id="hpCartStatus" role="status" class="hp-note"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== FORMACIÓN ===== -->
     <section class="sec" id="formacion">
       <div class="wrap narrow">
@@ -228,7 +196,7 @@
     <div class="wrap foot__in">
       <span class="logo-crop logo-crop--lg"><img src="assets/images/logo-hpr-key.png" alt="Logo HPR-KEY" width="1254" height="1254" loading="lazy"></span>
       <p>© 2026 HPR-KEY · Hugo Palacios — Desarrollo Web &amp; Marketing Digital</p>
-      <p class="slogan">DESARROLLA | APRENDE | AVANZA</p>
+      <p class="slogan">IMAGINA | DISEÑA | IMPACTA</p>
       <p><a data-wa="Hola Hugo, vi tu portafolio y me gustaría conversar contigo sobre un proyecto." href="https://wa.me/51952544545" target="_blank" rel="noopener">WhatsApp</a> · <a href="mailto:hugopalaciosriera@gmail.com">Correo</a></p>
     </div>
   </footer>
@@ -253,7 +221,6 @@
   </dialog>
 
   <script src="js/projects.js"></script>
-  <script src="js/main.js?v=20261019-3"></script>
-  <script src="js/store.js?v=20261019-3"></script>
+  <script src="js/main.js?v=immersive-20261021"></script>
 </body>
 </html>
