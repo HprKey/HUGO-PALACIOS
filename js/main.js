@@ -181,3 +181,13 @@ function renderProjects() {
 }
 renderProjects();
 hprObserveCards(grid);
+
+/* Cinematic progress and pointer depth; optional enhancement. */
+(() => {
+ const scene=document.querySelector('.immersive-scene'),bar=document.querySelector('.scroll-progress');
+ if(bar){let busy=false;const paint=()=>{const max=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(max>0?Math.min(1,scrollY/max):0)+')';busy=false};window.addEventListener('scroll',()=>{if(!busy){requestAnimationFrame(paint);busy=true}},{passive:true});paint()}
+ if(!scene||reduceMotion||!matchMedia('(pointer:fine)').matches)return;
+ const hero=document.querySelector('.hero');
+ hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;scene.style.transform='rotateY('+(-x*13)+'deg) rotateX('+(y*10)+'deg)'},{passive:true});
+ hero.addEventListener('pointerleave',()=>{scene.style.transform=''});
+})();
