@@ -245,3 +245,28 @@ input:focus,textarea:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 
   .photo img,.photo .photo__alt{animation:none!important}
   .photo .photo__alt{opacity:0}
 }
+
+
+/* Fondo degradado HPR-KEY — azul noche, índigo y cian sutil.
+   Mantiene intactas la foto, estructura y tarjetas originales. */
+:root{--bg:#040d20;--bg2:#0b1c38}
+html{background:#040d20}
+body{
+  background:
+    radial-gradient(ellipse 65% 34% at 88% 8%,rgba(35,103,205,.22),transparent 75%),
+    radial-gradient(ellipse 62% 29% at 9% 39%,rgba(29,80,155,.18),transparent 78%),
+    radial-gradient(ellipse 58% 27% at 92% 71%,rgba(20,157,190,.10),transparent 78%),
+    linear-gradient(145deg,#040b19 0%,#0b1b36 28%,#06132b 55%,#091b32 77%,#030b19 100%);
+  background-attachment:fixed;
+}
+.sec:nth-of-type(even){
+  background:linear-gradient(180deg,rgba(6,19,42,.18),rgba(12,35,66,.35) 50%,rgba(6,19,42,.16));
+}
+.hero{
+  background:
+    radial-gradient(ellipse 58% 64% at 78% 45%,rgba(27,115,211,.25),transparent 76%),
+    radial-gradient(ellipse 58% 55% at 18% 75%,rgba(29,70,151,.14),transparent 80%);
+}
+@media(max-width:768px){
+  body{background-attachment:scroll}
+}
